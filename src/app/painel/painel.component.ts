@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class PainelComponent implements OnInit {
 
   public frases: Frase[] = FRASES;
+  public instrucao: string = 'Traduza a frase:'; 
   constructor() { 
     console.log(this.frases);
   }
