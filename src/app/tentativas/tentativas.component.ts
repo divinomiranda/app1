@@ -1,12 +1,12 @@
 import { Coracao } from './../shared/coracao.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-tentativas',
   templateUrl: './tentativas.component.html',
   styleUrls: ['./tentativas.component.css']
 })
-export class TentativasComponent implements OnInit {
+export class TentativasComponent implements OnInit, OnChanges {
 
   @Input() public tentativas: number
   
@@ -20,8 +20,11 @@ export class TentativasComponent implements OnInit {
     
    }
 
-  ngOnInit() {
-    console.log('tentativas',this.tentativas)
-  }
+   ngOnChanges() {
+    console.log('tentativas: ',this.tentativas)
+   }
 
+  ngOnInit() {
+    
+  }
 }
