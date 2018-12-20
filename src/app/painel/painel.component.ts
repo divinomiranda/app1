@@ -51,9 +51,9 @@ export class PainelComponent implements OnInit {
       this.atualizaRodada()
       
     } else {
-      alert('A tradução está errada')
       //diminuir a variavel tentativas
       this.tentativas--
+      
       if(this.tentativas === -1){
         this.encerrarJogo.emit('Derrota')
       }
